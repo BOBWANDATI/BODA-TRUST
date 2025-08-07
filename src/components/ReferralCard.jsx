@@ -15,7 +15,7 @@ const ReferralCard = ({ name, date, status, earnings }) => {
         </div>
       </div>
       <div className="referral-earnings">
-        + UGX {earnings.toLocaleString()}
+        + KSH {earnings.toLocaleString()}
       </div>
     </div>
   );
