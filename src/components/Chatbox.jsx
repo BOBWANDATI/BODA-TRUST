@@ -7,7 +7,7 @@ const Chatbox = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: 'Hello! How can I help you today?',
+      text: 'Habari! Karibu BodaTrust. Nisaidie na nini leo?',
       sender: 'bot',
       time: '10:30 AM'
     }
@@ -21,28 +21,28 @@ const Chatbox = () => {
 
   const handleSendMessage = () => {
     if (newMessage.trim() === '') return;
-    
+
     const message = {
       id: messages.length + 1,
       text: newMessage,
       sender: 'user',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
-    
+
     setMessages([...messages, message]);
     setNewMessage('');
-    
-    // Simulate bot reply after 1-2 seconds
+
+    // Simulate bot reply
     setTimeout(() => {
       const replies = [
-        "I'm here to help with any questions about BodaTrust.",
-        "You can ask me about rides, payments, or emergencies.",
-        "Thanks for your message! How can I assist you?",
-        "I'll do my best to answer your questions.",
-        "Let me know if you need help with anything specific."
+        "Naweza kusaidia kuhusu safari zako au malipo ya KSH.",
+        "Unaweza kuuliza kuhusu jinsi ya kutumia referral code yako.",
+        "Ahsante kwa ujumbe wako! Unahitaji msaada gani zaidi?",
+        "Tutakusaidia haraka iwezekanavyo, endelea kuuliza.",
+        "Je, ungependa kujua jinsi ya kupata KSH kupitia referrals?"
       ];
       const reply = {
-        id: messages.length + 2,
+        id: message.id + 1,
         text: replies[Math.floor(Math.random() * replies.length)],
         sender: 'bot',
         time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
@@ -64,12 +64,10 @@ const Chatbox = () => {
       {isOpen ? (
         <div className="chatbox-window">
           <div className="chatbox-header">
-            <h3>BodaTrust Support</h3>
-            <button className="close-btn" onClick={toggleChat}>
-              ×
-            </button>
+            <h3>BodaTrust Msaada</h3>
+            <button className="close-btn" onClick={toggleChat}>×</button>
           </div>
-          
+
           <div className="chatbox-messages">
             {messages.map((message) => (
               <div
@@ -84,11 +82,11 @@ const Chatbox = () => {
             ))}
             <div ref={messagesEndRef} />
           </div>
-          
+
           <div className="chatbox-input">
             <input
               type="text"
-              placeholder="Type your message..."
+              placeholder="Andika ujumbe wako..."
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
@@ -99,7 +97,7 @@ const Chatbox = () => {
               onClick={handleSendMessage}
               disabled={!newMessage.trim()}
             >
-              Send
+              Tuma
             </Button>
           </div>
         </div>
