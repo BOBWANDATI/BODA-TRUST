@@ -157,7 +157,7 @@ const Login = () => {
         <div className="login-right">
           <div className="login-image">
             <div className="image-content">
-              <h2>Join Uganda's Most Trusted Boda Network</h2>
+              <h2>Join Kenyan's Most Trusted Boda Network</h2>
               <div className="features-list">
                 <div className="feature">
                   <span className="feature-icon">✅</span>
