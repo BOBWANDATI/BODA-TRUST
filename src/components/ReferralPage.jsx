@@ -1,4 +1,3 @@
-//import React from 'react';
 import React, { useState } from 'react';
 
 import Button from './Button';
@@ -8,7 +7,7 @@ import './ReferralPage.css';
 const ReferralPage = () => {
   const referralCode = 'BODATRUST123';
   const referralLink = `https://bodatrust.com/signup?ref=${referralCode}`;
-  
+
   const [referralStats] = useState({
     totalReferrals: 8,
     completedRides: 5,
@@ -100,11 +99,11 @@ const ReferralPage = () => {
               <div className="stat-label">Completed Rides</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">UGX {referralStats.earnings.toLocaleString()}</div>
+              <div className="stat-value">KSH {referralStats.earnings.toLocaleString()}</div>
               <div className="stat-label">Total Earnings</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">UGX {referralStats.pending.toLocaleString()}</div>
+              <div className="stat-value">KSH {referralStats.pending.toLocaleString()}</div>
               <div className="stat-label">Pending Earnings</div>
             </div>
           </div>
