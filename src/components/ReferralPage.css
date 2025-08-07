@@ -1,0 +1,151 @@
+.referral-page {
+    min-height: 100vh;
+    padding: 40px 0;
+    background-color: var(--light-gray);
+  }
+  
+  .referral-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .referral-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .referral-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+  }
+  
+  .referral-header p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+  }
+  
+  .referral-stats {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .stats-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .stats-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+  }
+  
+  .referral-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-gray);
+    padding: 12px 15px;
+    border-radius: var(--border-radius-sm);
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .referral-link {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+    word-break: break-all;
+    margin-bottom: 20px;
+  }
+  
+  .share-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+  }
+  
+  .referral-history h2 {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+  }
+  
+  .referrals-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .empty-state {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .empty-state p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 992px) {
+    .referral-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .referral-header h1 {
+      font-size: 2rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .stats-card {
+      padding: 20px;
+    }
+    
+    .share-buttons button {
+      width: 100%;
+    }
+  }

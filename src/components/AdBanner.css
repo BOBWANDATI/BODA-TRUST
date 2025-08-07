@@ -1,0 +1,118 @@
+.ad-banner {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .ad-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .ad-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ad-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+  }
+  
+  .ad-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .ad-description {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .ad-cta {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .ad-cta:hover {
+    background-color: rgba(255,255,255,0.9);
+  }
+  
+  .ad-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition);
+  }
+  
+  .indicator.active {
+    background-color: var(--white);
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .ad-container {
+      height: 150px;
+    }
+    
+    .ad-content {
+      padding: 15px;
+    }
+    
+    .ad-title {
+      font-size: 1.2rem;
+    }
+    
+    .ad-description {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ad-container {
+      height: 120px;
+    }
+    
+    .ad-content {
+      padding: 10px;
+    }
+    
+    .ad-title {
+      font-size: 1rem;
+    }
+    
+    .ad-cta {
+      padding: 6px 15px;
+      font-size: 0.875rem;
+    }
+  }

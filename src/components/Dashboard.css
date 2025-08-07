@@ -1,0 +1,386 @@
+.dashboard-page {
+    background-color: var(--light-gray);
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
+  
+  .dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+  
+  .dashboard-title {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+  }
+  
+  .dashboard-subtitle {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .stat-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .stat-icon {
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 107, 0, 0.1);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-content {
+    flex: 1;
+  }
+  
+  .stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+  }
+  
+  .dashboard-content {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .dashboard-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  .tab-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .tab-btn {
+    padding: 12px 15px;
+    border: none;
+    background-color: transparent;
+    border-radius: var(--border-radius-sm);
+    text-align: left;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tab-btn:hover {
+    background-color: rgba(255, 107, 0, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .quick-actions {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .quick-actions-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+  }
+  
+  .action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .dashboard-main {
+    flex: 1;
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .content-header {
+    margin-bottom: 30px;
+  }
+  
+  .content-header h2 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+  }
+  
+  .content-header p {
+    color: var(--dark-gray);
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .booking-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .option-group label {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+  }
+  
+  .select-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: var(--border-radius-sm);
+    font-family: inherit;
+    transition: var(--transition);
+  }
+  
+  .select-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .estimated-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .info-card {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-md);
+    padding: 15px;
+  }
+  
+  .info-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+    margin-bottom: 5px;
+  }
+  
+  .info-value {
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+  
+  .rides-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .drivers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .driver-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-md);
+    padding: 15px;
+  }
+  
+  .driver-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .driver-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .driver-details h4 {
+    margin-bottom: 5px;
+  }
+  
+  .driver-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+  }
+  
+  .driver-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .driver-price .price {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .wallet-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .balance-card {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+  }
+  
+  .balance-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .balance-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .balance-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .payment-methods h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .method-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .payment-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-sm);
+    padding: 12px 15px;
+  }
+  
+  .method-icon {
+    font-size: 1.2rem;
+  }
+  
+  .method-status {
+    margin-left: auto;
+    font-size: 0.75rem;
+    background-color: var(--success);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+  
+  @media (max-width: 992px) {
+    .dashboard-content {
+      flex-direction: column;
+    }
+    
+    .dashboard-sidebar {
+      width: 100%;
+    }
+    
+    .wallet-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .booking-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .estimated-info {
+      grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,203 @@
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+  }
+  
+  .register-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .register-left {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .register-brand {
+    margin-bottom: 40px;
+  }
+  
+  .brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .brand-icon {
+    margin-right: 10px;
+    font-size: 1.8rem;
+  }
+  
+  .register-content {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .register-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+  
+  .register-subtitle {
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .register-terms {
+    margin: 15px 0;
+  }
+  
+  .terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+    cursor: pointer;
+  }
+  
+  .terms-checkbox input {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+  }
+  
+  .terms-checkbox a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .terms-checkbox a:hover {
+    text-decoration: underline;
+  }
+  
+  .register-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    color: var(--dark-gray);
+    font-size: 0.875rem;
+  }
+  
+  .register-divider::before,
+  .register-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--medium-gray);
+  }
+  
+  .social-register {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .register-footer {
+    text-align: center;
+    color: var(--dark-gray);
+  }
+  
+  .login-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  .register-right {
+    flex: 1;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-image {
+    max-width: 500px;
+  }
+  
+  .image-content h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+  
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .benefit {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .benefit-icon {
+    font-size: 1.5rem;
+    margin-top: 3px;
+  }
+  
+  .benefit-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .benefit-content p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 992px) {
+    .register-right {
+      display: none;
+    }
+    
+    .register-left {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .register-container {
+      padding: 20px;
+    }
+    
+    .social-register {
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,149 @@
+.chat-room {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--white);
+  }
+  
+  .chat-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--medium-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .driver-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .driver-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  .driver-details h3 {
+    margin-bottom: 5px;
+  }
+  
+  .driver-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+  }
+  
+  .status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  .status-indicator.online {
+    background-color: var(--success);
+  }
+  
+  .ride-info {
+    text-align: right;
+  }
+  
+  .ride-route {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+    color: var(--dark-gray);
+  }
+  
+  .ride-price {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .message {
+    max-width: 70%;
+    display: flex;
+  }
+  
+  .message.sent {
+    align-self: flex-end;
+  }
+  
+  .message.received {
+    align-self: flex-start;
+  }
+  
+  .message-content {
+    padding: 12px 15px;
+    border-radius: 18px;
+    position: relative;
+  }
+  
+  .message.sent .message-content {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .message.received .message-content {
+    background-color: var(--light-gray);
+    color: var(--secondary-color);
+    border-bottom-left-radius: 4px;
+  }
+  
+  .message-time {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-top: 5px;
+    text-align: right;
+  }
+  
+  .chat-input {
+    padding: 15px;
+    border-top: 1px solid var(--medium-gray);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .message-input {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .chat-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .ride-info {
+      text-align: left;
+      width: 100%;
+    }
+    
+    .message {
+      max-width: 85%;
+    }
+  }

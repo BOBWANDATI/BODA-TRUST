@@ -1,0 +1,224 @@
+.wallet-view {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .wallet-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  
+  .tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+  }
+  
+  .tab-btn:hover {
+    background-color: rgba(255, 107, 0, 0.1);
+  }
+  
+  .tab-btn.active {
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .wallet-content {
+    padding: 20px;
+  }
+  
+  .balance-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .balance-card {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .balance-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .balance-label {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+  }
+  
+  .add-money-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .add-money-form h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: var(--border-radius-md);
+    font-family: inherit;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+  }
+  
+  .payment-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+  }
+  
+  .transactions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid var(--medium-gray);
+  }
+  
+  .transaction-icon {
+    font-size: 1.2rem;
+  }
+  
+  .transaction-details {
+    flex: 1;
+  }
+  
+  .transaction-description {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .transaction-date {
+    font-size: 0.875rem;
+    color: var(--dark-gray);
+  }
+  
+  .transaction-amount {
+    font-weight: 600;
+  }
+  
+  .transaction-amount.credit {
+    color: var(--success);
+  }
+  
+  .transaction-amount.debit {
+    color: var(--danger);
+  }
+  
+  .methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .method-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .method-icon {
+    font-size: 1.5rem;
+  }
+  
+  .method-details {
+    flex: 1;
+  }
+  
+  .method-description {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .method-status {
+    font-size: 0.75rem;
+    background-color: var(--success);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  @media (max-width: 768px) {
+    .balance-card {
+      padding: 20px;
+    }
+    
+    .balance-amount {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .wallet-tabs {
+      flex-direction: column;
+    }
+    
+    .tab-btn {
+      text-align: left;
+      border-bottom: 1px solid var(--medium-gray);
+      border-left: 3px solid transparent;
+    }
+    
+    .tab-btn.active {
+      border-bottom: 1px solid var(--medium-gray);
+      border-left: 3px solid var(--primary-color);
+    }
+  }

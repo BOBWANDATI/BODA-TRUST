@@ -1,0 +1,145 @@
+.trip-request-page {
+    min-height: 100vh;
+    padding: 40px 0;
+    background-color: var(--light-gray);
+  }
+  
+  .trip-request-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .trip-request-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .trip-request-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+  }
+  
+  .trip-request-header p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+  }
+  
+  .trip-request-form {
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 40px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .input-group label {
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+  
+  .input-group input[type="date"],
+  .input-group input[type="time"] {
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: var(--border-radius-md);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .input-group input[type="date"]:focus,
+  .input-group input[type="time"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
+  }
+  
+  .option-group {
+    margin-bottom: 25px;
+  }
+  
+  .option-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
+  .radio-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+  }
+  
+  .scheduled-rides h2 {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+  }
+  
+  .rides-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .empty-state {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .empty-state p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .radio-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .trip-request-header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .trip-request-form {
+      padding: 20px;
+    }
+  }

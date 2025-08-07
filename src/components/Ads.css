@@ -1,0 +1,157 @@
+.ads-page {
+    min-height: 100vh;
+    padding: 40px 0;
+    background-color: var(--light-gray);
+  }
+  
+  .ads-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .ads-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .ads-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+  }
+  
+  .ads-header p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+  }
+  
+  .ad-example {
+    margin-bottom: 50px;
+  }
+  
+  .ad-example h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+  }
+  
+  .ad-places h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+  }
+  
+  .places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .place-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .place-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .place-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .place-status {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: capitalize;
+  }
+  
+  .place-status.available {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--success);
+  }
+  
+  .place-status.active {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning);
+  }
+  
+  .place-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .place-size, .place-price {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .place-size span:first-child,
+  .place-price span:first-child {
+    font-weight: 500;
+  }
+  
+  .place-cta {
+    margin-top: 10px;
+  }
+  
+  .ad-contact {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .ad-contact h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+  }
+  
+  .ad-contact p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .ad-contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .ad-contact a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .ads-header h1 {
+      font-size: 2rem;
+    }
+    
+    .ad-example h2,
+    .ad-places h2,
+    .ad-contact h2 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ad-contact {
+      padding: 20px;
+    }
+  }
