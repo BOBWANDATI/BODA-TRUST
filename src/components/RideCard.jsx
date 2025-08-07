@@ -2,17 +2,17 @@ import React from 'react';
 import Button from './Button';
 import './RideCard.css';
 
-const RideCard = ({ 
-  pickup, 
-  destination, 
-  estimatedTime, 
-  price, 
-  driverName, 
-  driverRating, 
+const RideCard = ({
+  pickup,
+  destination,
+  estimatedTime,
+  price,
+  driverName,
+  driverRating,
   vehicleType,
   onBook,
   onCancel,
-  status = 'available' 
+  status = 'available'
 }) => {
   const getStatusClass = () => {
     switch (status) {
@@ -43,7 +43,7 @@ const RideCard = ({
           </span>
         </div>
         <div className="ride-price">
-          <span className="price-amount">UGX {price?.toLocaleString()}</span>
+          <span className="price-amount">KSH {price?.toLocaleString()}</span>
           <span className="price-label">Estimated</span>
         </div>
       </div>
