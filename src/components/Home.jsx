@@ -11,8 +11,8 @@ const Home = () => {
   const availableRides = [
     {
       id: 1,
-      pickup: 'Kampala Central',
-      destination: 'Makerere University',
+      pickup: 'Kisumu',
+      destination: 'jomo kenyattta university',
       estimatedTime: 15,
       price: 8000,
       driverName: 'Moses Kato',
@@ -49,7 +49,7 @@ const Home = () => {
               Your Trusted <span className="text-gradient">Boda Boda</span> Partner
             </h1>
             <p className="hero-description">
-              Safe, reliable, and affordable rides across Uganda. Connect with verified drivers, 
+              Safe, reliable, and affordable rides across kenya. Connect with verified drivers, 
               get emergency assistance, and earn rewards with every ride.
             </p>
             
