@@ -6,10 +6,10 @@
 /* ✅ HERO SECTION WITH BACKGROUND IMAGE */
 .hero {
   background: 
-    linear-gradient(135deg, rgba(255,107,0,0.4), rgba(255,255,255,0.8)),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
     url('https://github.com/BOBWANDATI/MY-PORTFOLIO-BOB/blob/master/random-institute-HD4qf8FfK7s-unsplash.jpg?raw=true') center/cover no-repeat;
   padding: 80px 0;
-  color: var(--dark-gray);
+  color: white;
 }
 
 .hero-container {
@@ -29,19 +29,18 @@
   font-size: 3rem;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: white;
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  background: none;
+  color: white;
 }
 
 .hero-description {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: var(--dark-gray);
+  color: white;
 }
 
 .hero-features {
@@ -55,10 +54,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 12px 20px;
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
+  color: #000;
 }
 
 .feature-icon {
