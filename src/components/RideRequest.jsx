@@ -9,36 +9,37 @@ const RideRequest = () => {
   const [destination, setDestination] = useState('');
   const [rideType, setRideType] = useState('regular');
   const [schedule, setSchedule] = useState('now');
+
   const [availableRides] = useState([
     {
       id: 1,
-      pickup: 'Kampala Central',
-      destination: 'Makerere University',
-      estimatedTime: 15,
-      price: 8000,
-      driverName: 'Moses Kato',
+      pickup: 'Nairobi CBD',
+      destination: 'Kenyatta Market',
+      estimatedTime: 10,
+      price: 250,
+      driverName: 'Brian Otieno',
       driverRating: 4.8,
       vehicleType: 'Boda Boda',
       status: 'available'
     },
     {
       id: 2,
-      pickup: 'Ntinda',
-      destination: 'Garden City',
-      estimatedTime: 20,
-      price: 12000,
-      driverName: 'Sarah Nakato',
+      pickup: 'Westlands',
+      destination: 'Kileleshwa',
+      estimatedTime: 15,
+      price: 350,
+      driverName: 'Faith Njeri',
       driverRating: 4.9,
       vehicleType: 'Boda Boda',
       status: 'available'
     },
     {
       id: 3,
-      pickup: 'Kibuli',
-      destination: 'Nakawa',
+      pickup: 'South B',
+      destination: 'Upper Hill',
       estimatedTime: 12,
-      price: 7000,
-      driverName: 'James Ssemambo',
+      price: 300,
+      driverName: 'John Mwangi',
       driverRating: 4.7,
       vehicleType: 'Boda Boda',
       status: 'available'
@@ -65,20 +66,20 @@ const RideRequest = () => {
       <div className="ride-request-container">
         <div className="ride-request-header">
           <h1>Request a Ride</h1>
-          <p>Find available drivers for your route</p>
+          <p>Find available drivers for your route in Kenya</p>
         </div>
 
         <div className="ride-request-form">
           <div className="form-row">
             <Input
-              placeholder="Pickup location"
+              placeholder="Pickup location (e.g. Nairobi CBD)"
               value={pickup}
               onChange={(e) => setPickup(e.target.value)}
               icon="📍"
               size="lg"
             />
             <Input
-              placeholder="Destination"
+              placeholder="Destination (e.g. Kenyatta Market)"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
               icon="🎯"
@@ -168,6 +169,7 @@ const RideRequest = () => {
               <RideCard
                 key={ride.id}
                 {...ride}
+                price={`KSH ${ride.price.toLocaleString()}`}
                 onBook={() => handleBookRide(ride.id)}
               />
             ))}
