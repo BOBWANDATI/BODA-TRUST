@@ -7,47 +7,48 @@ const ChatRoom = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: 'Hello! How can I help you today?',
+      text: 'Habari! Nisaidie vipi leo?',
       sender: 'driver',
       time: '10:30 AM'
     },
     {
       id: 2,
-      text: 'Hi! I\'m at the pickup location now.',
+      text: 'Niko kwa pickup location sasa.',
       sender: 'user',
       time: '10:31 AM'
     },
     {
       id: 3,
-      text: 'Great! I\'ll be there in 2 minutes. Look for a blue boda with plate UBA 123A.',
+      text: 'Sawa! Nitafika ndani ya dakika 2. Angalia boda ya blue namba KDA 123X.',
       sender: 'driver',
       time: '10:32 AM'
     }
   ]);
+
   const [newMessage, setNewMessage] = useState('');
   const messagesEndRef = useRef(null);
 
   const handleSendMessage = () => {
     if (newMessage.trim() === '') return;
-    
+
     const message = {
       id: messages.length + 1,
       text: newMessage,
       sender: 'user',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
-    
+
     setMessages([...messages, message]);
     setNewMessage('');
-    
-    // Simulate driver reply after 1-3 seconds
+
+    // Simulate driver reply after 1–3 seconds
     setTimeout(() => {
       const replies = [
-        "I'm on my way!",
-        "I'll be there shortly.",
-        "Thanks for letting me know.",
-        "Please wait at the pickup point.",
-        "I've arrived at the location."
+        "Niko njiani!",
+        "Nitafika sasa hivi.",
+        "Ahsante kwa ujumbe.",
+        "Tafadhali subiri hapo hapo.",
+        "Nimefika kwa location."
       ];
       const reply = {
         id: messages.length + 2,
@@ -71,9 +72,9 @@ const ChatRoom = () => {
     <div className="chat-room">
       <div className="chat-header">
         <div className="driver-info">
-          <div className="driver-avatar">M</div>
+          <div className="driver-avatar">B</div>
           <div className="driver-details">
-            <h3>Moses Kato</h3>
+            <h3>Brian Otieno</h3>
             <div className="driver-status">
               <span className="status-indicator online"></span>
               <span>Online</span>
@@ -82,11 +83,11 @@ const ChatRoom = () => {
         </div>
         <div className="ride-info">
           <div className="ride-route">
-            <span>📍 Kampala Central</span>
+            <span>📍 Nairobi CBD</span>
             <span>→</span>
-            <span>🎯 Makerere University</span>
+            <span>🎯 Kenyatta Market</span>
           </div>
-          <div className="ride-price">UGX 8,000</div>
+          <div className="ride-price">KSH 250</div>
         </div>
       </div>
 
@@ -107,7 +108,7 @@ const ChatRoom = () => {
 
       <div className="chat-input">
         <Input
-          placeholder="Type your message..."
+          placeholder="Andika ujumbe wako..."
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
@@ -118,7 +119,7 @@ const ChatRoom = () => {
           onClick={handleSendMessage}
           disabled={!newMessage.trim()}
         >
-          Send
+          Tuma
         </Button>
       </div>
     </div>
